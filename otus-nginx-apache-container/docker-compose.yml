@@ -1,0 +1,37 @@
+version: '3'
+services:
+  apache1:
+    image: httpd:2.4
+    container_name: apache1_1
+    ports:
+      - "10021:80"
+    volumes:
+      - ./apache1/index.html:/usr/local/apache2/htdocs/index.html
+
+  apache2:
+    image: httpd:2.4
+    container_name: apache2_1
+    ports:
+      - "10022:80"
+    volumes:
+      - ./apache2/index.html:/usr/local/apache2/htdocs/index.html
+
+  apache3:
+    image: httpd:2.4
+    container_name: apache3_1
+    ports:
+      - "10023:80"
+    volumes:
+      - ./apache3/index.html:/usr/local/apache2/htdocs/index.html
+
+  nginx:
+    image: nginx:stable
+    container_name: nginx
+    ports:
+      - "9090:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - apache1
+      - apache2
+      - apache3
