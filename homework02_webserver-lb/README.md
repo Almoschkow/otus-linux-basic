@@ -14,7 +14,7 @@ Cоздать базовый скелет web-сервера с балансир
 ### Предварительные действия:
 Установить пакеты nginx и apache
 ```
-sudo apt-get install nginx apache2 -y
+apt-get install nginx apache2 -y
 ```
 
 ### Проверка успешной балансировки
@@ -26,3 +26,9 @@ curl localhost:80 | grep 'Apache2 Default Page:'
 
 ### Notes:
 Папка Cheats - папка с подсказками по настройке.
+
+Перезапуск сервисов nginx, apache2:
+```
+service nginx reload
+service apache2 reload
+```
