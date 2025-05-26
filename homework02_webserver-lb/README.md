@@ -25,10 +25,15 @@ curl localhost:80 | grep 'Apache2 Default Page:'
 > При многократной отправке Curl, результатом должен быть ответ "Apache2 Default Page:*" (Где * - один из трех портов для балансировки: 8081, 8082, 8083)
 
 ### Notes:
-Папка Cheats - папка с подсказками по настройке.
+- Папка Cheats - папка с подсказками по настройке.
 
-Перезапуск сервисов nginx, apache2:
+- Перезапуск сервисов nginx, apache2:
 ```
 service nginx reload
 service apache2 reload
 ```
+- Nginx конфигурация:
+https://nginx.org/ru/docs/
+
+- Apache2 конфигурация:
+https://httpd.apache.org/docs/2.4/en/
