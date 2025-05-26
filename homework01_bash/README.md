@@ -16,3 +16,6 @@
 ```
 bash tmp_cleaner.sh
 ```
+
+### Примеры кода расположены по ссылке:
+[Ссылка](https://github.com/blackden/linux.basic)
