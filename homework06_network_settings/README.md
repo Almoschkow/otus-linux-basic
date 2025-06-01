@@ -29,3 +29,9 @@ sudo netplan apply
 ```
 sudo netplan generate
 ```
+
+Расположение конфига:
+
+```
+/etc/netplan/
+```
